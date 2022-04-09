@@ -15,13 +15,7 @@
       2,
       {
         "args": "all",
-        "argsIgnorePattern": "^_",
-        "no-console": [
-          "error",
-          {
-            "allow": ["warn", "error"]
-          }
-        ]
+        "argsIgnorePattern": "^_"
       }
     ]
   }
