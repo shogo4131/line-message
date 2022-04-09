@@ -5,7 +5,11 @@
   "main": "serverless.ts",
   "scripts": {
     "format": "prettier --write src/**/*.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged",
+    "prettier": "prettier --write .",
+    "lint": "eslint ."
   },
   "engines": {
     "node": ">=14.15.0"
@@ -19,13 +23,20 @@
     "@serverless/typescript": "^2.23.0",
     "@types/aws-lambda": "^8.10.71",
     "@types/node": "^14.14.25",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
     "esbuild": "^0.14.27",
     "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": ">=6",
     "json-schema-to-ts": "^1.5.0",
+    "lint-staged": ">=10",
     "prettier": "^2.6.2",
     "serverless": "^2.23.0",
     "serverless-esbuild": "^1.26.1",
     "serverless-offline": "^8.5.0",
+    "serverless-offline-aws-eventbridge": "^1.6.6",
     "ts-loader": "^8.0.15",
     "ts-node": "^9.1.1",
     "tsconfig-paths": "^3.9.0",
@@ -33,5 +44,14 @@
     "typescript": "^4.6.3"
   },
   "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",
-  "license": "MIT"
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts}": "eslint --cache --fix",
+    "*": "prettier --write ."
+  }
 }
