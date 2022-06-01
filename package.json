@@ -33,7 +33,7 @@
     "json-schema-to-ts": "^1.5.0",
     "lint-staged": ">=10",
     "prettier": "^2.6.2",
-    "serverless": "^2.23.0",
+    "serverless": "^3.18.2",
     "serverless-esbuild": "^1.26.1",
     "serverless-offline": "^8.5.0",
     "serverless-offline-aws-eventbridge": "^1.6.6",
