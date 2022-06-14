@@ -1,8 +1,8 @@
-import type { ValidatedEventAPIGatewayProxyEvent } from '@libs/apiGateway';
 import { formatJSONResponse } from '@libs/apiGateway';
 import { middyfy } from '@libs/lambda';
 
-const handler: ValidatedEventAPIGatewayProxyEvent<{}> = async (event) => {
+const handler = async (event) => {
+  console.log('success');
   return formatJSONResponse({
     message: 'こんにちは',
     event,

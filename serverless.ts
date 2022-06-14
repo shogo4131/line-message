@@ -1,6 +1,6 @@
 import type { AWS } from '@serverless/typescript';
 
-import message from '@functions/message';
+import hello from '@functions/message';
 
 const serverlessConfiguration: AWS = {
   service: 'line-bot',
@@ -10,9 +10,8 @@ const serverlessConfiguration: AWS = {
     name: 'aws',
     runtime: 'nodejs14.x',
     region: 'ap-northeast-1',
-    apiGateway: {
-      minimumCompressionSize: 1024,
-      shouldStartNameWithService: true,
+    eventBridge: {
+      useCloudFormation: true,
     },
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
@@ -20,7 +19,9 @@ const serverlessConfiguration: AWS = {
     lambdaHashingVersion: '20201221',
   },
   // import the function via paths
-  functions: { message },
+  functions: {
+    hello,
+  },
   package: { individually: true },
   custom: {
     esbuild: {
