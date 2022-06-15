@@ -1,10 +1,21 @@
 import { formatJSONResponse } from '@libs/apiGateway';
+import { client } from '@libs/client';
 import { middyfy } from '@libs/lambda';
+import { Message } from '@line/bot-sdk';
 
 const handler = async (event) => {
-  console.log('success');
+  const message: Message = {
+    type: 'text',
+    text: 'メッセージだよ',
+  };
+  try {
+    await client.pushMessage(process.env.USER_ID || '', message);
+  } catch (error) {
+    console.error(error);
+  }
+
   return formatJSONResponse({
-    message: 'こんにちは',
+    message: 'success',
     event,
   });
 };
