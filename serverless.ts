@@ -17,6 +17,7 @@ const serverlessConfiguration: AWS = {
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
       CHANNEL_ACCESS_TOKEN: process.env.CHANNEL_ACCESS_TOKEN || '',
+      USER_ID: process.env.USER_ID || '',
     },
     lambdaHashingVersion: '20201221',
   },
