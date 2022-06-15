@@ -1,11 +1,12 @@
 import type { AWS } from '@serverless/typescript';
 
-import hello from '@functions/message';
+import message from '@functions/message';
 
 const serverlessConfiguration: AWS = {
   service: 'line-bot',
   frameworkVersion: '2',
-  plugins: ['serverless-esbuild', 'serverless-offline'],
+  useDotenv: true,
+  plugins: ['serverless-esbuild', 'serverless-offline', 'serverless-dotenv-plugin'],
   provider: {
     name: 'aws',
     runtime: 'nodejs14.x',
@@ -15,12 +16,13 @@ const serverlessConfiguration: AWS = {
     },
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
+      CHANNEL_ACCESS_TOKEN: process.env.CHANNEL_ACCESS_TOKEN || '',
     },
     lambdaHashingVersion: '20201221',
   },
   // import the function via paths
   functions: {
-    hello,
+    message,
   },
   package: { individually: true },
   custom: {

@@ -15,6 +15,7 @@
     "node": ">=14.15.0"
   },
   "dependencies": {
+    "@line/bot-sdk": "^7.5.0",
     "@middy/core": "^1.5.2",
     "@middy/http-json-body-parser": "^1.5.2",
     "source-map-support": "^0.5.19"
@@ -34,6 +35,7 @@
     "lint-staged": ">=10",
     "prettier": "^2.6.2",
     "serverless": "^2.23.0",
+    "serverless-dotenv-plugin": "^4.0.1",
     "serverless-esbuild": "^1.30.0",
     "serverless-offline": "^8.5.0",
     "serverless-offline-aws-eventbridge": "^1.6.6",

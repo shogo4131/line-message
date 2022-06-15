@@ -7,3 +7,6 @@ jspm_packages
 
 # Esbuild directories
 .esbuild
+
+# env
+.env
