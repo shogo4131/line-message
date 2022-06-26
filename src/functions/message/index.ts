@@ -5,7 +5,7 @@ export default {
   events: [
     {
       eventBridge: {
-        schedule: 'rate(5 minutes)',
+        schedule: 'cron(45 13 ? * 1,2,3,5 *)',
       },
     },
   ],
