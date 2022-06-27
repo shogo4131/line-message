@@ -4,7 +4,7 @@ import message from '@functions/message';
 
 const serverlessConfiguration: AWS = {
   service: 'line-bot',
-  frameworkVersion: '2',
+  frameworkVersion: '3',
   useDotenv: true,
   plugins: ['serverless-esbuild', 'serverless-offline', 'serverless-dotenv-plugin'],
   provider: {
