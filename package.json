@@ -18,8 +18,7 @@
     "@line/bot-sdk": "^7.5.0",
     "@middy/core": "^1.5.2",
     "@middy/http-json-body-parser": "^1.5.2",
-    "source-map-support": "^0.5.19",
-    "ts-node": "^10.8.1"
+    "source-map-support": "^0.5.19"
   },
   "devDependencies": {
     "@serverless/typescript": "^2.23.0",
@@ -40,6 +39,7 @@
     "serverless-esbuild": "^1.30.0",
     "serverless-offline": "^8.5.0",
     "ts-loader": "^9.3.0",
+    "ts-node": "^10.8.1",
     "tsconfig-paths": "^4.0.0",
     "tsconfig-paths-webpack-plugin": "^3.3.0",
     "typescript": "^4.6.3"
