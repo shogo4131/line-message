@@ -6,12 +6,7 @@ const serverlessConfiguration: AWS = {
   service: 'line-bot',
   frameworkVersion: '2',
   useDotenv: true,
-  plugins: [
-    'serverless-esbuild',
-    'serverless-offline',
-    'serverless-offline-aws-eventbridge',
-    'serverless-dotenv-plugin',
-  ],
+  plugins: ['serverless-esbuild', 'serverless-offline', 'serverless-dotenv-plugin'],
   provider: {
     name: 'aws',
     runtime: 'nodejs14.x',

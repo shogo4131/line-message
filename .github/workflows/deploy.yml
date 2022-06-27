@@ -3,7 +3,7 @@ name: Deploy serverless line message app
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
