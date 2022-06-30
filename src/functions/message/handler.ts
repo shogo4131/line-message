@@ -16,8 +16,6 @@ const handler = async () => {
       selectedMessage = 'ダンボール、衣類';
       break;
     case 2:
-      selectedMessage = '燃えるゴミ';
-      break;
     case 5:
       selectedMessage = '燃えるゴミ';
       break;
