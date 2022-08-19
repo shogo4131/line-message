@@ -19,6 +19,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
+      - name: Install Plugin and Deploy
+        uses: serverless/github-action@v3.1
+        with:
+          args: -c "serverless plugin install --name serverless && serverless deploy"
+          entrypoint: /bin/sh
       - name: serverless deploy
         uses: serverless/github-action@v3.1
         with:
