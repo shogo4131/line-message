@@ -348,12 +348,10 @@
     file-type "^15.0.0"
     form-data "^3.0.0"
 
-"@middy/core@^1.5.2":
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/@middy/core/-/core-1.5.2.tgz#41e09c541ad13fd7acc48a63a72a211206ce2f2b"
-  integrity sha512-ja9hE3BheH9brkpFvNZ8bEQjopTT6ldGSbCPSGZk3UVgC9i9SdhoPOoFetrl3sOBO/sG6L8kKPxxUWeo1aO9Ug==
-  dependencies:
-    once "^1.4.0"
+"@middy/core@^3.2.1":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@middy/core/-/core-3.2.1.tgz#16f12c9ac9432ff55555cef5d698ba5b523bb887"
+  integrity sha512-QYElg97KOknq/ekXJD/wbIcbfj+c35T+kNuHX7QNPlmUNnMGuVj1OrK1cvrI5lBCtPWhALu8V8S7dZyIwOiDZQ==
 
 "@middy/http-json-body-parser@^1.5.2":
   version "1.5.2"
