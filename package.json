@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@line/bot-sdk": "^7.5.0",
-    "@middy/core": "^1.5.2",
+    "@middy/core": "^3.3.0",
     "@middy/http-json-body-parser": "^1.5.2",
     "source-map-support": "^0.5.19",
     "ts-node": "^10.9.1"
