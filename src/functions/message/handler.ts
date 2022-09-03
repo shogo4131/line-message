@@ -33,7 +33,7 @@ const handler = async () => {
   try {
     await client.pushMessage(process.env.USER_ID || '', message);
   } catch (error) {
-    console.error(error);
+    if (error instanceof Error) console.error(error);
   }
 
   console.info('success send message');
