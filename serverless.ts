@@ -20,6 +20,7 @@ const serverlessConfiguration: AWS = {
       USER_ID: process.env.USER_ID || '',
     },
     lambdaHashingVersion: '20201221',
+    logRetentionInDays: 7,
   },
   // import the function via paths
   functions: {
