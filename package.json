@@ -4,25 +4,20 @@
   "description": "Serverless aws-nodejs-typescript template",
   "main": "serverless.ts",
   "scripts": {
+    "deploy": "sls deploy",
     "format": "prettier --write src/**/*.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
     "prettier": "prettier --write .",
     "lint": "eslint ."
   },
-  "engines": {
-    "node": ">=14.15.0"
-  },
   "dependencies": {
     "@line/bot-sdk": "^7.5.0",
-    "@middy/core": "^3.3.1",
-    "@middy/http-json-body-parser": "^3.3.1",
-    "source-map-support": "^0.5.19",
     "ts-node": "^10.9.1"
   },
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.103",
     "@serverless/typescript": "^3.21.0",
+    "@types/aws-lambda": "^8.10.103",
     "@types/node": "^18.7.17",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.37.0",
@@ -31,11 +26,10 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "husky": ">=8",
-    "json-schema-to-ts": "^1.5.0",
     "prettier": "^2.7.1",
     "serverless": "^3.19.0",
-    "serverless-esbuild": "^1.32.8",
     "serverless-dotenv-plugin": "^4.0.2",
+    "serverless-esbuild": "^1.32.8",
     "serverless-offline": "^10.0.2",
     "ts-loader": "^9.3.1",
     "tsconfig-paths": "^4.1.0",
