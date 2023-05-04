@@ -1,8 +1,8 @@
 import { client } from '@libs/client';
-import { middyfy } from '@libs/lambda';
-import { Message } from '@line/bot-sdk';
+import type { Handler } from 'aws-lambda';
+import type { Message } from '@line/bot-sdk';
 
-const handler = async () => {
+const handler: Handler = async () => {
   const day = new Date().getUTCDay();
 
   console.info('selected day', day);
@@ -33,10 +33,10 @@ const handler = async () => {
   try {
     await client.pushMessage(process.env.USER_ID || '', message);
   } catch (error) {
-    if (error instanceof Error) console.error(error);
+    if (error instanceof Error) throw new Error('APIエラーが発生しました。', error);
   }
 
   console.info('success send message');
 };
 
-export const main = middyfy(handler);
+export const main = handler;
