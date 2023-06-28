@@ -27,7 +27,7 @@
     "eslint-plugin-import": "^2.26.0",
     "husky": ">=8",
     "prettier": "^2.7.1",
-    "serverless": "^3.19.0",
+    "serverless": "^3.33.0",
     "serverless-dotenv-plugin": "^4.0.2",
     "serverless-esbuild": "^1.32.8",
     "serverless-offline": "^10.0.2",
