@@ -30,7 +30,7 @@
     "serverless": "^3.34.0",
     "serverless-dotenv-plugin": "^4.0.2",
     "serverless-esbuild": "^1.32.8",
-    "serverless-offline": "^10.0.2",
+    "serverless-offline": "^13.2.0",
     "ts-loader": "^9.4.4",
     "tsconfig-paths": "^4.2.0",
     "tsconfig-paths-webpack-plugin": "^4.0.0",
